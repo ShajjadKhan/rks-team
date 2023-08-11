@@ -1,0 +1,127 @@
+
+@media (max-width:1024px) {
+  .container{
+    max-width: 970px;
+  }
+}
+@media (max-width:768px) {
+    .container{
+      max-width: 650px;
+    }
+    .menus{
+      width: 100%;
+      height: 0;
+      background: var(--bg-color);
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: 0.5s;
+      z-index: 99;
+      top: -100%;
+  
+    }
+    .homeContent{
+      width: 100%;
+    }
+    .homeImg{
+      width: 100%;
+    }
+    .flexCol{
+      flex-direction: column;
+    }
+
+    .menus.activeMenu{
+      top: 0;
+      height: 100vh;
+      
+    }
+    .menus ul{
+      flex-direction: column;
+      height: 100vh;
+    }
+    .menus ul li{
+      margin-top: 20px;
+    }
+    .mobileMenu{
+      width: 40px;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      z-index: 101;
+    }
+    
+    .mobileMenu span{
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background: var(--primary);
+      position: relative;
+    }
+    .mobileMenu span::before, .mobileMenu span::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      transition: all 0.5s;
+    }
+    .mobileMenu span::before{
+      left: 0;
+      transform: translateY(6px);
+      width: 50%;
+    
+    }
+    .mobileMenu span.activeMenus::before{
+      transform: rotate(45deg);
+      width: 100%;
+    }
+    .mobileMenu span.activeMenus{
+      background: var(--bg-color);
+    }
+    .mobileMenu span::after{
+     right: 0;
+      transform: translateY(-6px);
+    width: 50%;
+    }
+
+    .mobileMenu span.activeMenus::after{
+      transform: rotate(-45deg);
+      width: 100%;
+    }
+    .mobileMenu span:hover::before,
+    .mobileMenu span:hover::after{
+      width: 100%;
+    }
+}
+
+
+@media (max-width:425px) {
+  .container{
+    max-width: 400px;
+  }
+  footer h3{
+    font-size: 14px;
+  }
+}
+
+@media (max-width:375px) {
+  .container{
+    max-width: 350px;
+  }
+}
+
+@media (max-width:320px) {
+  .container{
+    max-width: 280px;
+  }
+  .serviceBox{
+    width: 200px;
+  }
+}
+
+@media (max-width:280px) {
+  .container{
+    max-width: 250px;
+  }
+}
