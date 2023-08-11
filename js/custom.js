@@ -4,7 +4,8 @@ const menus = document.querySelector(".menus");
 
 
 mobileMenu.addEventListener("click", function(){
-  span.classList.toggle("activeMenus")
+  document.querySelector(".barsIcons").classList.toggle("fa-xmark")
+
   menus.classList.toggle("activeMenu")
 })
 
